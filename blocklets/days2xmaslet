@@ -1,0 +1,23 @@
+#!/bin/bash
+
+LABEL=${LABEL:-""}
+
+# Set Christmas date
+CHRISTMAS_DATE=$(date -d "December 25" +%s)
+
+# Get current date
+CURRENT_DATE=$(date +%s)
+
+# Calculate difference in days
+DAYS_UNTIL_CHRISTMAS=$(( (CHRISTMAS_DATE - CURRENT_DATE) / 86400 ))
+
+# If Christmas has already passed this year, calculate for next year
+if [ $DAYS_UNTIL_CHRISTMAS -lt 0 ]; then
+  CHRISTMAS_DATE=$(date -d "next year December 25" +%s)
+  DAYS_UNTIL_CHRISTMAS=$(( (CHRISTMAS_DATE - CURRENT_DATE) / 86400 ))
+fi
+
+echo "${LABEL} $DAYS_UNTIL_CHRISTMAS"
+echo "${LABEL} $DAYS_UNTIL_CHRISTMAS"
+echo "#00FF00"
+echo ""

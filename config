@@ -1,0 +1,5 @@
+
+[days2xmaslet]
+interval=3600
+command=${BLOCKLETS_DIR}/days2xmaslet
+label=󰄊
