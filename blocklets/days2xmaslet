@@ -9,15 +9,15 @@ CHRISTMAS_DATE=$(date -d "December 25" +%s)
 CURRENT_DATE=$(date +%s)
 
 # Calculate difference in days
-DAYS_UNTIL_CHRISTMAS=$(( (CHRISTMAS_DATE - CURRENT_DATE) / 86400 ))
+DAYS_UNTIL_CHRISTMAS=$(( ((CHRISTMAS_DATE - CURRENT_DATE) / 86400) + 1 ))
 
 # If Christmas has already passed this year, calculate for next year
 if [ $DAYS_UNTIL_CHRISTMAS -lt 0 ]; then
   CHRISTMAS_DATE=$(date -d "next year December 25" +%s)
-  DAYS_UNTIL_CHRISTMAS=$(( (CHRISTMAS_DATE - CURRENT_DATE) / 86400 ))
+  DAYS_UNTIL_CHRISTMAS=$(( ((CHRISTMAS_DATE - CURRENT_DATE) / 86400) + 1 ))
 fi
 
 echo "${LABEL} $DAYS_UNTIL_CHRISTMAS"
 echo "${LABEL} $DAYS_UNTIL_CHRISTMAS"
-echo "#00FF00"
-echo ""
+echo "${FG_COLOR:-#00FF00}"
+echo "${BG_COLOR}"
