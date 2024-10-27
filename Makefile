@@ -1,4 +1,4 @@
-
+ARGS?=
 
 setup:
 	go mod tidy
@@ -33,5 +33,5 @@ clean:
 
 # TODO run tests
 test:
-	go test ./...
+	go test $(ARGS) ./...
 
