@@ -2,6 +2,7 @@ ARGS?=
 
 setup:
 	go install github.com/gotesttools/gotestfmt/v2/cmd/gotestfmt@latest
+	go mod download
 	go mod tidy
 
 linux-amd64: 

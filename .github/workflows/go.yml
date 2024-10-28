@@ -18,7 +18,7 @@ jobs:
       with:
         go-version: ${{ matrix.go-version }}
     - name: Get dependencies
-      run: go mod tidy && go mod download
+      run: make setup
     - name: Build
       run: make build-all
     - name: Test
