@@ -1,7 +1,7 @@
 ARGS?=
 
 setup:
-	go get github.com/boumenot/gocover-cobertura
+	go install github.com/boumenot/gocover-cobertura@latest
 	go install github.com/gotesttools/gotestfmt/v2/cmd/gotestfmt@latest
 	go mod download
 	go mod tidy
@@ -33,7 +33,13 @@ build-all: linux-amd64 darwin-amd64 windows-amd64 linux-arm64
 clean:
 	go clean ./cmd/...
 	rm -Rf bin
+	rm TestResult*.json
+	rm test.log
+	rm coverage.*
 
 # TODO run tests
 test:
-	go test -race -json -v -coverprofile=coverage.txt ./... 2>&1 | tee /tmp/gotest.log | gotestfmt
+	go test -race -json -v -coverprofile=coverage.txt ./... 2>&1 | tee test.log | gotestfmt
+
+coverage:
+	gocover-cobertura < coverage.txt > coverage.xml

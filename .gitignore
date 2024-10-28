@@ -3,4 +3,6 @@ bin/
 *.test
 TestResult*.json
 coverage*.txt
+coverage*.xml
+*.log
 
