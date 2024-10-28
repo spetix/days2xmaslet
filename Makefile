@@ -1,6 +1,7 @@
 ARGS?=
 
 setup:
+	go install github.com/gotesttools/gotestfmt/v2/cmd/gotestfmt@latest
 	go mod tidy
 
 linux-amd64: 
@@ -33,5 +34,4 @@ clean:
 
 # TODO run tests
 test:
-	go test $(ARGS) ./...
-
+	go test -race -json -v -coverprofile=coverage.txt ./... 2>&1 | tee /tmp/gotest.log | gotestfmt
