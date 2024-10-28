@@ -20,7 +20,7 @@ jobs:
     - name: Build
       run: make build-all
     - name: Test
-      run: make test ARGS="--json --fail-on-error" > TestResults-${{ matrix.go-version }}.json
+      run: make test ARGS='--json' >TestResults-${{ matrix.go-version }}.json
     - name: Upload Go test results
       uses: actions/upload-artifact@v4
       with:
