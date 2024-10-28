@@ -1,4 +1,4 @@
 bin/
-go.sum
+# go.sum
 *.test
 
