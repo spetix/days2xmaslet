@@ -7,9 +7,11 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     strategy:
         matrix:
           go-version: [ '1.23.x' ]
+    
   
     steps:
     - uses: actions/checkout@v2
@@ -19,8 +21,13 @@ jobs:
         go-version: ${{ matrix.go-version }}
     - name: Get dependencies
       run: make setup
-    - name: Build
+    - name: Build All ${{ matrix.go-version }}
       run: make build-all
+    - name: Save build binaries ${{ matrix.go-version }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: Go-build-${{ matrix.go-version }}
+        path: bin
     - name: Test
       run: make test >TestResults-${{ matrix.go-version }}.json
     - name: Upload Go test results
@@ -29,7 +36,26 @@ jobs:
         name: Go-results-${{ matrix.go-version }}
         path: TestResults-${{ matrix.go-version }}.json
     - name: Convert go coverage to corbetura format
-      run: make coverage
+      run: make coverage > coverage-${{ matrix.go-version }}.xml
+    - name: Generate code coverage report ${{ matrix.go-version }}
+      uses: irongut/CodeCoverageSummary@v1.3.0
+      with:
+        filename: coverage-${{ matrix.go-version }}.xml
+        badge: false
+        fail_below_min: false
+        format: markdown
+        hide_branch_rate: false
+        hide_complexity: true
+        indicators: true
+        output: both
+        thresholds: '60 80'
+
+    - name: Add Coverage PR Comment ${{ matrix.go-version }}
+      uses: marocchino/sticky-pull-request-comment@v2
+      if: github.event_name == 'pull_request'
+      with:
+        recreate: true
+        path: code-coverage-results-${{ matrix.go-version }}.md
     
 
 
