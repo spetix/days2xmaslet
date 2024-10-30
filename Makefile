@@ -41,7 +41,7 @@ clean:
 	rm coverage.*
 
 test:
-	test.log
+	test-results.json
 
 # TODO run tests
 test-results.json:
