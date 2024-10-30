@@ -23,7 +23,7 @@ jobs:
     - name: Get dependencies
       run: make setup
     - name: Build All
-      run: make build-all
+      run: make build
     - name: Save build binaries
       uses: actions/upload-artifact@v4
       with:
