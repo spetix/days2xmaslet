@@ -26,20 +26,26 @@ linux-arm64:
 	mkdir -p bin/linux-arm64
 	GOOS=linux GOARCH=arm64 go build -v -o bin/linux-arm64/ ./cmd/...
 
+
+
 # Define the build-all target
-build-all: linux-amd64 darwin-amd64 windows-amd64 linux-arm64
+build: linux-amd64 darwin-amd64 windows-amd64 linux-arm64
+
 
 # TODO clean binaries
 clean:
 	go clean ./cmd/...
 	rm -Rf bin
-	rm TestResult*.json
+	rm test-result*.json
 	rm test.log
 	rm coverage.*
 
-# TODO run tests
 test:
-	go test -race -json -v -coverprofile=coverage.txt ./... 2>&1 | tee test.log | gotestfmt
+	test.log
 
-coverage:
+# TODO run tests
+test-results.json:
+	go test -race -json -v -coverprofile=coverage.txt ./... 2>&1 | tee test-results.json | gotestfmt
+
+coverage: test-results.json
 	gocover-cobertura < coverage.txt > coverage.xml
