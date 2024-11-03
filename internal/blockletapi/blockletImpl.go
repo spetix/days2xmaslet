@@ -32,5 +32,5 @@ func New(renderOptions *RenderOptions, proto string) Blocklet {
 }
 
 func (b *BlockletImpl) Print() {
-	b.out.Print(dateutil.HowManyDaysToXmas(time.Now()), b.renderOptions)
+	b.out.Print(dateutil.HowManyDaysToXmas(time.Now(), b.renderOptions.Unit), b.renderOptions)
 }

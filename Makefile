@@ -6,17 +6,17 @@ setup:
 	go mod download
 	go mod tidy
 
-linux-amd64: 
+bin/linux-amd64: 
 	@echo "Building linux-amd64"
-	mkdir -p bin/linux-amd64
-	GOOS=linux GOARCH=amd64 go build -v -o bin/linux-amd64/ ./cmd/...
+	@mkdir -p bin/linux-amd64
+	@GOOS=linux GOARCH=amd64 go build -v -o bin/linux-amd64/ ./cmd/...
 
-darwin-amd64:
+bin/darwin-amd64:
 	@echo "Building darwin-amd64"
 	mkdir -p bin/darwin-amd64
 	GOOS=darwin GOARCH=amd64 go build -v -o bin/darwin-amd64/ ./cmd/...
 
-windows-amd64:
+bin/windows-amd64:
 	@echo "Building windows-amd64"
 	mkdir -p bin/windows-amd64
 	GOOS=windows GOARCH=amd64 go build -v -o bin/windows-amd64/ ./cmd/...
@@ -30,10 +30,10 @@ bin/linux-arm64:
 
 # Define the build-all target
 .PHONY: build
-build: 
-	$(MAKE) linux-amd64 
-	$(MAKE) darwin-amd64 
-	$(MAKE) windows-amd64 
+build: setup
+	$(MAKE) bin/linux-amd64 
+	$(MAKE) bin/darwin-amd64 
+	$(MAKE) bin/windows-amd64 
 	$(MAKE) bin/linux-arm64
 
 
@@ -51,5 +51,8 @@ test: build
 test-results.json:
 	go test -race -json -v -coverprofile=coverage.txt ./... 2>&1 | tee test-results.json | gotestfmt
 
-coverage: test-results.json
+coverage: test
 	gocover-cobertura < coverage.txt > coverage.xml
+
+
+all: build test coverage

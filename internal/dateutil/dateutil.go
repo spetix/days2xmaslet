@@ -9,13 +9,15 @@ const (
 	Day = time.Duration(time.Hour * 24)
 )
 
-func HowManyDaysToXmas(actualDate time.Time) time.Duration {
+func HowManyDaysToXmas(actualDate time.Time, unit time.Duration) time.Duration {
 
-	xmas := time.Date(actualDate.Year(), 12, 25, 0, 0, 0, 0, actualDate.Location())
-	if actualDate.After(xmas) {
+	adjustedDate := actualDate.Truncate(unit)
+
+	xmas := time.Date(adjustedDate.Year(), 12, 25, 0, 0, 0, 0, adjustedDate.Location())
+	if adjustedDate.After(xmas) {
 		xmas = xmas.AddDate(1, 0, 0)
 	}
-	return xmas.Sub(actualDate)
+	return xmas.Sub(adjustedDate)
 }
 
 func Format(d time.Duration, unit time.Duration) string {
@@ -29,9 +31,9 @@ func Format(d time.Duration, unit time.Duration) string {
 		}
 
 	case time.Minute:
-		return d.Truncate(time.Minute).String()
+		return fmt.Sprint((d.Truncate(time.Minute) + time.Minute).String(), "m")
 	case time.Second:
-		return d.Truncate(time.Second).String()
+		return fmt.Sprint((d.Truncate(time.Second) + time.Second).String(), "s")
 	default:
 		return d.String()
 	}
