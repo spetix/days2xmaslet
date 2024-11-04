@@ -60,14 +60,14 @@ jobs:
       with:
         recreate: true
         path: code-coverage-results.md
-
+    - name: ls
+      run: ls -FlaR .
     - name: Release
       uses: softprops/action-gh-release@v2
       if: startsWith(github.ref, 'refs/tags/')
       with:
         files: |
-          bin/*
-          days2xmaslet-bundle.zip
+          *
     
 
 
