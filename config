@@ -1,6 +1,6 @@
 
 [days2xmaslet]
-interval=3600
+interval=1
 command=${BLOCKLETS_DIR}/days2xmaslet
 label=󰄊
 fg_color=#00FF00

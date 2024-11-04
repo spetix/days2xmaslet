@@ -1,0 +1,8 @@
+bin/
+# go.sum
+*.test
+TestResult*.json
+coverage*.txt
+coverage*.xml
+*.log
+
