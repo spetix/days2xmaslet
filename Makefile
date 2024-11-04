@@ -16,7 +16,7 @@ bin/days2xmaslet-darwin-amd64:
 	mkdir -p bin
 	GOOS=darwin GOARCH=amd64 go build -v -o bin/days2xmaslet-darwin-amd64 ./cmd/...
 
-bin/days2xmaslet-windows-amd64.exe
+bin/days2xmaslet-windows-amd64.exe:
 	@echo "Building windows-amd64"
 	mkdir -p bin/windows-amd64
 	GOOS=windows GOARCH=amd64 go build -v -o bin/days2xmaslet-windows-amd64.exe ./cmd/...
