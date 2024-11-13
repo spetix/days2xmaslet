@@ -45,7 +45,7 @@ jobs:
       with:
         filename: coverage.xml
         badge: true
-        fail_below_min: false
+        fail_below_min: true
         format: markdown
         hide_branch_rate: false
         hide_complexity: true
@@ -71,10 +71,13 @@ jobs:
         files: |
           bin/days2xmaslet-*
           README.md
+    - name: Build site
+      run: make site
+      if: startsWith(github.ref, 'refs/tags/')
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        folder: bin # The folder the action should deploy
+        folder: build/site # The folder the action should deploy
 
 

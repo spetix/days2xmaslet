@@ -5,4 +5,5 @@ TestResult*.json
 coverage*.txt
 coverage*.xml
 *.log
+test-results.json
 
