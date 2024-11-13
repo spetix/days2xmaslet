@@ -1,4 +1,4 @@
-https://img.shields.io/badge/Code%20Coverage-83%25-success?style=flat
+![coverage](https://img.shields.io/badge/dinamic/json?style=flat)
 
 It provides a blocklet that shows how many days until Christmas.
 
