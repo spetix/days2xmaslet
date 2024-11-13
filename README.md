@@ -1,4 +1,4 @@
-![Dynamic XML Badge](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fspetix.github.io%2Fdays2xmaslet%2Fcoverage.xml&query=%2F%2Fcoverage%2F%40line-rate%20*100&label=coverage)
+![Dynamic XML Badge](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fspetix.github.io%2Fdays2xmaslet%2Fcoverage.xml&query=round(100*%2F%2Fcoverage%2F%40line-rate)&suffix=%25&style=plastic&label=Code%20Coverage)
 
 It provides a blocklet that shows how many days until Christmas.
 
