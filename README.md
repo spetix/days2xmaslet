@@ -1,4 +1,4 @@
 Latest release
 
 
-(README.md)[test]
+[./README.md](test)
