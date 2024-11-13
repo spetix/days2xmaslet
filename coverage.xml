@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.43609023" branch-rate="0" version="" timestamp="1731464795782" lines-covered="58" lines-valid="133" branches-covered="0" branches-valid="0" complexity="0">
+  <sources>
+    <source>/home/runner/work/days2xmaslet/days2xmaslet</source>
+  </sources>
+  <packages>
+    <package name="github.com/spetix/days2xmasleft/cmd/days2xmaslet" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="-" filename="cmd/days2xmaslet/main.go" line-rate="0" branch-rate="0" complexity="0">
+          <methods>
+            <method name="main" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="11" hits="0"></line>
+                <line number="12" hits="0"></line>
+                <line number="13" hits="0"></line>
+                <line number="14" hits="0"></line>
+                <line number="15" hits="0"></line>
+                <line number="16" hits="0"></line>
+                <line number="17" hits="0"></line>
+                <line number="18" hits="0"></line>
+                <line number="19" hits="0"></line>
+                <line number="20" hits="0"></line>
+                <line number="21" hits="0"></line>
+                <line number="22" hits="0"></line>
+                <line number="23" hits="0"></line>
+                <line number="24" hits="0"></line>
+                <line number="27" hits="0"></line>
+                <line number="28" hits="0"></line>
+                <line number="29" hits="0"></line>
+                <line number="30" hits="0"></line>
+                <line number="31" hits="0"></line>
+                <line number="32" hits="0"></line>
+                <line number="33" hits="0"></line>
+                <line number="34" hits="0"></line>
+                <line number="35" hits="0"></line>
+                <line number="36" hits="0"></line>
+                <line number="37" hits="0"></line>
+                <line number="38" hits="0"></line>
+                <line number="39" hits="0"></line>
+                <line number="40" hits="0"></line>
+                <line number="41" hits="0"></line>
+                <line number="42" hits="0"></line>
+                <line number="43" hits="0"></line>
+                <line number="44" hits="0"></line>
+                <line number="45" hits="0"></line>
+                <line number="46" hits="0"></line>
+                <line number="47" hits="0"></line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0"></line>
+            <line number="12" hits="0"></line>
+            <line number="13" hits="0"></line>
+            <line number="14" hits="0"></line>
+            <line number="15" hits="0"></line>
+            <line number="16" hits="0"></line>
+            <line number="17" hits="0"></line>
+            <line number="18" hits="0"></line>
+            <line number="19" hits="0"></line>
+            <line number="20" hits="0"></line>
+            <line number="21" hits="0"></line>
+            <line number="22" hits="0"></line>
+            <line number="23" hits="0"></line>
+            <line number="24" hits="0"></line>
+            <line number="27" hits="0"></line>
+            <line number="28" hits="0"></line>
+            <line number="29" hits="0"></line>
+            <line number="30" hits="0"></line>
+            <line number="31" hits="0"></line>
+            <line number="32" hits="0"></line>
+            <line number="33" hits="0"></line>
+            <line number="34" hits="0"></line>
+            <line number="35" hits="0"></line>
+            <line number="36" hits="0"></line>
+            <line number="37" hits="0"></line>
+            <line number="38" hits="0"></line>
+            <line number="39" hits="0"></line>
+            <line number="40" hits="0"></line>
+            <line number="41" hits="0"></line>
+            <line number="42" hits="0"></line>
+            <line number="43" hits="0"></line>
+            <line number="44" hits="0"></line>
+            <line number="45" hits="0"></line>
+            <line number="46" hits="0"></line>
+            <line number="47" hits="0"></line>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="github.com/spetix/days2xmasleft/internal/blockletapi" line-rate="0.516129" branch-rate="0" complexity="0">
+      <classes>
+        <class name="-" filename="internal/blockletapi/blockletImpl.go" line-rate="0" branch-rate="0" complexity="0">
+          <methods>
+            <method name="getOut" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="15" hits="0"></line>
+                <line number="16" hits="0"></line>
+                <line number="17" hits="0"></line>
+                <line number="18" hits="0"></line>
+                <line number="19" hits="0"></line>
+                <line number="20" hits="0"></line>
+                <line number="21" hits="0"></line>
+                <line number="22" hits="0"></line>
+                <line number="23" hits="0"></line>
+              </lines>
+            </method>
+            <method name="New" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="27" hits="0"></line>
+                <line number="28" hits="0"></line>
+                <line number="29" hits="0"></line>
+                <line number="30" hits="0"></line>
+                <line number="31" hits="0"></line>
+                <line number="32" hits="0"></line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="0"></line>
+            <line number="16" hits="0"></line>
+            <line number="17" hits="0"></line>
+            <line number="18" hits="0"></line>
+            <line number="19" hits="0"></line>
+            <line number="20" hits="0"></line>
+            <line number="21" hits="0"></line>
+            <line number="22" hits="0"></line>
+            <line number="23" hits="0"></line>
+            <line number="27" hits="0"></line>
+            <line number="28" hits="0"></line>
+            <line number="29" hits="0"></line>
+            <line number="30" hits="0"></line>
+            <line number="31" hits="0"></line>
+            <line number="32" hits="0"></line>
+          </lines>
+        </class>
+        <class name="BlockletImpl" filename="internal/blockletapi/blockletImpl.go" line-rate="0" branch-rate="0" complexity="0">
+          <methods>
+            <method name="Print" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="34" hits="0"></line>
+                <line number="35" hits="0"></line>
+                <line number="36" hits="0"></line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="0"></line>
+            <line number="35" hits="0"></line>
+            <line number="36" hits="0"></line>
+          </lines>
+        </class>
+        <class name="-" filename="internal/blockletapi/jsonout.go" line-rate="0" branch-rate="0" complexity="0">
+          <methods>
+            <method name="NewJsonOut" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="14" hits="0"></line>
+                <line number="15" hits="0"></line>
+                <line number="16" hits="0"></line>
+                <line number="17" hits="0"></line>
+                <line number="18" hits="0"></line>
+                <line number="19" hits="0"></line>
+                <line number="20" hits="0"></line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="0"></line>
+            <line number="15" hits="0"></line>
+            <line number="16" hits="0"></line>
+            <line number="17" hits="0"></line>
+            <line number="18" hits="0"></line>
+            <line number="19" hits="0"></line>
+            <line number="20" hits="0"></line>
+          </lines>
+        </class>
+        <class name="JsonOut" filename="internal/blockletapi/jsonout.go" line-rate="0" branch-rate="0" complexity="0">
+          <methods>
+            <method name="Print" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="22" hits="0"></line>
+                <line number="23" hits="0"></line>
+                <line number="24" hits="0"></line>
+                <line number="25" hits="0"></line>
+                <line number="26" hits="0"></line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="0"></line>
+            <line number="23" hits="0"></line>
+            <line number="24" hits="0"></line>
+            <line number="25" hits="0"></line>
+            <line number="26" hits="0"></line>
+          </lines>
+        </class>
+        <class name="-" filename="internal/blockletapi/rawout.go" line-rate="1" branch-rate="0" complexity="0">
+          <methods>
+            <method name="NewRawOut" signature="" line-rate="1" branch-rate="0" complexity="0">
+              <lines>
+                <line number="15" hits="1"></line>
+                <line number="16" hits="1"></line>
+                <line number="17" hits="1"></line>
+                <line number="18" hits="1"></line>
+                <line number="19" hits="1"></line>
+                <line number="20" hits="1"></line>
+                <line number="21" hits="1"></line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="1"></line>
+            <line number="16" hits="1"></line>
+            <line number="17" hits="1"></line>
+            <line number="18" hits="1"></line>
+            <line number="19" hits="1"></line>
+            <line number="20" hits="1"></line>
+            <line number="21" hits="1"></line>
+          </lines>
+        </class>
+        <class name="RawOut" filename="internal/blockletapi/rawout.go" line-rate="1" branch-rate="0" complexity="0">
+          <methods>
+            <method name="Print" signature="" line-rate="1" branch-rate="0" complexity="0">
+              <lines>
+                <line number="23" hits="1"></line>
+                <line number="24" hits="1"></line>
+                <line number="25" hits="1"></line>
+                <line number="26" hits="1"></line>
+                <line number="27" hits="1"></line>
+                <line number="28" hits="1"></line>
+                <line number="29" hits="1"></line>
+                <line number="30" hits="1"></line>
+                <line number="31" hits="1"></line>
+                <line number="32" hits="1"></line>
+                <line number="33" hits="1"></line>
+                <line number="34" hits="1"></line>
+                <line number="35" hits="1"></line>
+                <line number="36" hits="1"></line>
+                <line number="37" hits="1"></line>
+                <line number="38" hits="1"></line>
+                <line number="39" hits="1"></line>
+                <line number="40" hits="1"></line>
+                <line number="41" hits="1"></line>
+                <line number="42" hits="1"></line>
+                <line number="43" hits="1"></line>
+                <line number="44" hits="1"></line>
+                <line number="45" hits="1"></line>
+                <line number="46" hits="1"></line>
+                <line number="47" hits="1"></line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"></line>
+            <line number="24" hits="1"></line>
+            <line number="25" hits="1"></line>
+            <line number="26" hits="1"></line>
+            <line number="27" hits="1"></line>
+            <line number="28" hits="1"></line>
+            <line number="29" hits="1"></line>
+            <line number="30" hits="1"></line>
+            <line number="31" hits="1"></line>
+            <line number="32" hits="1"></line>
+            <line number="33" hits="1"></line>
+            <line number="34" hits="1"></line>
+            <line number="35" hits="1"></line>
+            <line number="36" hits="1"></line>
+            <line number="37" hits="1"></line>
+            <line number="38" hits="1"></line>
+            <line number="39" hits="1"></line>
+            <line number="40" hits="1"></line>
+            <line number="41" hits="1"></line>
+            <line number="42" hits="1"></line>
+            <line number="43" hits="1"></line>
+            <line number="44" hits="1"></line>
+            <line number="45" hits="1"></line>
+            <line number="46" hits="1"></line>
+            <line number="47" hits="1"></line>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="github.com/spetix/days2xmasleft/internal/dateutil" line-rate="0.7222222" branch-rate="0" complexity="0">
+      <classes>
+        <class name="-" filename="internal/dateutil/dateutil.go" line-rate="0.7222222" branch-rate="0" complexity="0">
+          <methods>
+            <method name="HowManyDaysToXmas" signature="" line-rate="1" branch-rate="0" complexity="0">
+              <lines>
+                <line number="12" hits="6"></line>
+                <line number="13" hits="6"></line>
+                <line number="14" hits="6"></line>
+                <line number="15" hits="6"></line>
+                <line number="16" hits="6"></line>
+                <line number="17" hits="3"></line>
+                <line number="18" hits="3"></line>
+                <line number="19" hits="3"></line>
+                <line number="20" hits="6"></line>
+              </lines>
+            </method>
+            <method name="Format" signature="" line-rate="0.46666667" branch-rate="0" complexity="0">
+              <lines>
+                <line number="23" hits="1"></line>
+                <line number="24" hits="1"></line>
+                <line number="25" hits="1"></line>
+                <line number="26" hits="0"></line>
+                <line number="27" hits="0"></line>
+                <line number="28" hits="1"></line>
+                <line number="29" hits="1"></line>
+                <line number="30" hits="1"></line>
+                <line number="31" hits="1"></line>
+                <line number="33" hits="0"></line>
+                <line number="34" hits="0"></line>
+                <line number="35" hits="0"></line>
+                <line number="36" hits="0"></line>
+                <line number="37" hits="0"></line>
+                <line number="38" hits="0"></line>
+              </lines>
+            </method>
+            <method name="GetUnit" signature="" line-rate="0.8333333" branch-rate="0" complexity="0">
+              <lines>
+                <line number="42" hits="4"></line>
+                <line number="43" hits="4"></line>
+                <line number="44" hits="1"></line>
+                <line number="45" hits="1"></line>
+                <line number="46" hits="1"></line>
+                <line number="47" hits="1"></line>
+                <line number="48" hits="1"></line>
+                <line number="49" hits="1"></line>
+                <line number="50" hits="1"></line>
+                <line number="51" hits="1"></line>
+                <line number="52" hits="0"></line>
+                <line number="53" hits="0"></line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="6"></line>
+            <line number="13" hits="6"></line>
+            <line number="14" hits="6"></line>
+            <line number="15" hits="6"></line>
+            <line number="16" hits="6"></line>
+            <line number="17" hits="3"></line>
+            <line number="18" hits="3"></line>
+            <line number="19" hits="3"></line>
+            <line number="20" hits="6"></line>
+            <line number="23" hits="1"></line>
+            <line number="24" hits="1"></line>
+            <line number="25" hits="1"></line>
+            <line number="26" hits="0"></line>
+            <line number="27" hits="0"></line>
+            <line number="28" hits="1"></line>
+            <line number="29" hits="1"></line>
+            <line number="30" hits="1"></line>
+            <line number="31" hits="1"></line>
+            <line number="33" hits="0"></line>
+            <line number="34" hits="0"></line>
+            <line number="35" hits="0"></line>
+            <line number="36" hits="0"></line>
+            <line number="37" hits="0"></line>
+            <line number="38" hits="0"></line>
+            <line number="42" hits="4"></line>
+            <line number="43" hits="4"></line>
+            <line number="44" hits="1"></line>
+            <line number="45" hits="1"></line>
+            <line number="46" hits="1"></line>
+            <line number="47" hits="1"></line>
+            <line number="48" hits="1"></line>
+            <line number="49" hits="1"></line>
+            <line number="50" hits="1"></line>
+            <line number="51" hits="1"></line>
+            <line number="52" hits="0"></line>
+            <line number="53" hits="0"></line>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

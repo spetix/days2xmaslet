@@ -1,4 +1,4 @@
-![coverage](https://img.shields.io/badge/dinamic/json?style=flat)
+# days2xmaslet
 
 It provides a blocklet that shows how many days until Christmas.
 
@@ -17,13 +17,3 @@ bg_color =
 label = 🎄
 ```
 
-
-## Latest release
-
-
-
-* [linux amd64 version](./days2xmaslet-linux-amd64)
-
-* [linux arm64 version](./days2xmaslet-linux-arm64)
-
-* [
