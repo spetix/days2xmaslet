@@ -19,8 +19,8 @@ label = 🎄
 
 ## Downloads
 
-* [linux amd64 version](days2xmaslet_linux_amd64)
-* [linux arm64 version](days2xmaslet_linux_arm64)
+* [linux amd64 version](days2xmaslet-linux-amd64)
+* [linux arm64 version](days2xmaslet-linux-arm64)
 
 
 # Build details
