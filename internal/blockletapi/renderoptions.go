@@ -10,4 +10,6 @@ type RenderOptions struct {
 	ForegroundColor string
 	BackgroundColor string
 	Unit            time.Duration
+	ButtonClicked   uint8
+	BaseLogFolder   string
 }

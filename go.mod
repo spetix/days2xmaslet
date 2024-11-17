@@ -1,10 +1,11 @@
 module github.com/spetix/days2xmasleft
 
-go 1.23.2
+go 1.23.3
 
 require github.com/inconshreveable/mousetrap v1.1.0 // indirect
 
 require (
+	github.com/jezek/xgb v1.1.1
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/pflag v1.0.5 // indirect
 )

@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/spetix/days2xmasleft/internal/dateutil"
+	"github.com/spetix/days2xmasleft/internal/popup"
 )
 
 type BlockletImpl struct {
@@ -31,6 +32,17 @@ func New(renderOptions *RenderOptions, proto string) Blocklet {
 	}
 }
 
-func (b *BlockletImpl) Print() {
+func (b *BlockletImpl) Execute() {
+
+	if b.renderOptions.ButtonClicked > 0 {
+		b.doPopUP()
+		return
+	}
+
 	b.out.Print(dateutil.HowManyDaysToXmas(time.Now(), b.renderOptions.Unit), b.renderOptions)
+}
+
+func (b *BlockletImpl) doPopUP() {
+	p := popup.New()
+	p.Execute()
 }

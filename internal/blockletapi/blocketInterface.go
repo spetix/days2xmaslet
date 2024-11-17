@@ -1,5 +1,5 @@
 package blockletapi
 
 type Blocklet interface {
-	Print()
+	Execute()
 }
