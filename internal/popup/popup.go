@@ -34,9 +34,11 @@ func (p *Popup) Execute() {
 		return
 	}
 
-	screenWidth := int(setup.Roots[0].WidthInPixels)
+	screenWidth := int(setup.Roots[0].
+		WidthInPixels)
 	length := screenWidth / 3
-	screenHeight := int(setup.Roots[0].HeightInPixels)
+	screenHeight := int(setup.Roots[0].
+		HeightInPixels)
 	height := screenHeight / 3
 	// Calculate the x and y coordinates to center the window
 	x := (screenWidth - length) / 2
