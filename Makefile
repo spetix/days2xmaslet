@@ -1,8 +1,8 @@
 ARGS?=
 
 setup:
-	go install github.com/boumenot/gocover-cobertura@latest
-	go install github.com/gotesttools/gotestfmt/v2/cmd/gotestfmt@latest
+	go install github.com/boumenot/gocover-cobertura@latest || exit 0
+	go install github.com/gotesttools/gotestfmt/v2/cmd/gotestfmt@latest || exit 0
 	go mod download
 	go mod tidy
 

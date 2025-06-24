@@ -19,6 +19,8 @@ func getOut(protocol string) BlockletOutput {
 		return NewJsonOut(os.Stdout)
 	case "raw":
 		return NewRawOut(os.Stdout)
+	case "waybar":
+		return NewWaybarOut(os.Stdout)
 	default:
 		return NewRawOut(os.Stdout)
 	}
