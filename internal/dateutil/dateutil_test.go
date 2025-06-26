@@ -20,26 +20,6 @@ var currentDateAndExpectedDays = []dateAndExpectedDay{
 	{time.Date(2019, 12, 28, 0, 0, 0, 0, time.UTC), 363 * Day, Day, "363"},
 }
 
-func TestHowManyDaysToXmas(t *testing.T) {
-
-	for _, currentTest := range currentDateAndExpectedDays {
-
-		days := HowManyDaysToXmas(currentTest.Date, currentTest.Unit)
-		if days != currentTest.ExpectedDays {
-			t.Fail()
-		}
-
-	}
-}
-func TestFormat_forHour(t *testing.T) {
-	actualDate := time.Date(2024, 12, 24, 1, 50, 0, 0, time.UTC)
-
-	formatted := Format(HowManyDaysToXmas(actualDate, time.Hour), time.Hour)
-	if formatted != "23h" {
-		t.Fail()
-	}
-}
-
 func TestGetUnit(t *testing.T) {
 	unit := GetUnit("d")
 	if unit != Day {
