@@ -1,0 +1,43 @@
+package out
+
+import (
+	"encoding/json"
+	"log"
+	"os"
+
+	data "github.com/spetix/days2xmasleft/internal/data"
+)
+
+type WaybarOut struct {
+	baseOutput
+}
+type outputjsonWaybar struct {
+	Text            string `json:"text"`
+	Tooltip         string `json:"tooltip"`
+	Alt             string `json:"alt"`
+	BackgroundColor string `json:"background-color"`
+	ForegroundColor string `json:"foreground-color"`
+}
+
+func NewWaybarOut(device *os.File) BlockletOutput {
+	return &WaybarOut{
+		baseOutput: baseOutput{
+			Device: device,
+		},
+	}
+}
+
+func (j *WaybarOut) Print(d data.Data) {
+	newJson := outputjsonWaybar{
+		Alt:             d.Label(),
+		Text:            d.Short(), //dateutil.Format(unit, rerenderOptions.Unit),
+		Tooltip:         d.Long(),  //fmt.Sprint(dateutil.Format(unit, rerenderOptions.Unit), " to xmas"),
+		BackgroundColor: d.BackgroundColor(),
+		ForegroundColor: d.ForegroundColor(),
+	}
+	b, err := json.Marshal(newJson)
+	if err != nil {
+		log.Print("json marshal error", err)
+	}
+	j.Device.Write(b)
+}
