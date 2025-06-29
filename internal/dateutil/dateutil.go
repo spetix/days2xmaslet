@@ -9,6 +9,21 @@ const (
 	Day = time.Duration(time.Hour * 24)
 )
 
+func GetUnitString(unit time.Duration) string {
+	switch unit {
+	case Day:
+		return "days"
+	case time.Hour:
+		return "hours"
+	case time.Minute:
+		return "minutes"
+	case time.Second:
+		return "seconds"
+	default:
+		return "days"
+	}
+}
+
 func StringToDateNextOccurrence(s string) time.Time {
 	t, _ := time.Parse("01-02", s)
 	t = time.Date(time.Now().Year(), t.Month(), t.Day(), 0, 0, 0, 0, time.Local)

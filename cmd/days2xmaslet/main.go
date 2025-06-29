@@ -13,6 +13,8 @@ import (
 
 func main() {
 	var renderOptions render.RenderOptions
+	var eventDate string
+	var eventName string
 
 	var proto string
 	rootCmd := &cobra.Command{
@@ -22,7 +24,7 @@ func main() {
 			return nil
 		},
 		Run: func(cmd *cobra.Command, args []string) {
-			d := event.New("XMas", "12-25", &renderOptions, time.Now)
+			d := event.New(eventName, eventDate, &renderOptions, time.Now)
 			b := blockletapi.New(d, proto)
 			b.Print()
 		},
@@ -47,6 +49,9 @@ func main() {
 		bgclr = "#000000"
 	}
 	flags.StringVarP(&renderOptions.BackgroundColor, "background", "b", "#000000", "background color")
+
+	flags.StringVarP(&eventDate, "event", "e", "12-25", "event date")
+	flags.StringVarP(&eventName, "name", "n", "Christmas", "event name")
 
 	rootCmd.Execute()
 }
