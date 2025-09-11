@@ -2,14 +2,19 @@ package main
 
 import (
 	"os"
+	"time"
 
 	"github.com/spetix/days2xmasleft/internal/blockletapi"
+	"github.com/spetix/days2xmasleft/internal/data/event"
+	"github.com/spetix/days2xmasleft/internal/data/render"
 	"github.com/spetix/days2xmasleft/internal/dateutil"
 	"github.com/spf13/cobra"
 )
 
 func main() {
-	var renderOptions blockletapi.RenderOptions
+	var renderOptions render.RenderOptions
+	var eventDate string
+	var eventName string
 
 	var proto string
 	rootCmd := &cobra.Command{
@@ -19,7 +24,8 @@ func main() {
 			return nil
 		},
 		Run: func(cmd *cobra.Command, args []string) {
-			b := blockletapi.New(&renderOptions, proto)
+			d := event.New(eventName, eventDate, &renderOptions, time.Now)
+			b := blockletapi.New(d, proto)
 			b.Print()
 		},
 	}
@@ -43,6 +49,9 @@ func main() {
 		bgclr = "#000000"
 	}
 	flags.StringVarP(&renderOptions.BackgroundColor, "background", "b", "#000000", "background color")
+
+	flags.StringVarP(&eventDate, "event", "e", "12-25", "event date")
+	flags.StringVarP(&eventName, "name", "n", "Christmas", "event name")
 
 	rootCmd.Execute()
 }
