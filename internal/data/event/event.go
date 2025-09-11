@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/spetix/bar-out-adapters/pkg/barout/data"
 	"github.com/spetix/days2xmasleft/internal/data/render"
 	"github.com/spetix/days2xmasleft/internal/dateutil"
 )
@@ -11,6 +12,7 @@ import (
 type timeReferenceFunc func() time.Time
 
 type Event struct {
+	data.Data
 	eventName     string
 	eventDate     time.Time
 	renderOptions *render.RenderOptions

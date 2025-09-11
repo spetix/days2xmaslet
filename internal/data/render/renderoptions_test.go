@@ -23,22 +23,12 @@ var currentDateAndExpected = []dateAndExpectedDays{
 }
 
 func TestGetUnit(t *testing.T) {
-	r := RenderOptions{Unit: dateutil.Day}
-	unit := r.FormatData(
 
-	)
-	if unit != dateutil.Day {
-		t.Fail()
-	}
-	unit = GetUnit("h")
-	if unit != time.Hour {
-		t.Fail()
-	}
-	unit = GetUnit("m")
-		t.Fail()
-	}
-	unit = GetUnit("s")
-	if unit != time.Second {
-		t.Fail()
+	for _, v := range currentDateAndExpected {
+		r := RenderOptions{Unit: v.Unit}
+		unit := r.FormatData(v.ExpectedDays)
+		if unit != v.ExpectedFormattedResult {
+			t.Fail()
+		}
 	}
 }

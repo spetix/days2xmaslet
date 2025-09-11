@@ -1,20 +1,19 @@
 package blockletapi
 
 import (
-	"github.com/spetix/days2xmasleft/internal/data"
-
-	"github.com/spetix/days2xmasleft/internal/out"
+	"github.com/spetix/bar-out-adapters/pkg/barout"
+	"github.com/spetix/bar-out-adapters/pkg/barout/data"
 )
 
 type BlockletImpl struct {
 	data data.Data
-	out  out.BlockletOutput
+	out  barout.BlockletOutput
 }
 
 func New(data data.Data, proto string) Blocklet {
 	return &BlockletImpl{
 		data: data,
-		out:  out.New(proto),
+		out:  barout.New(proto),
 	}
 }
 

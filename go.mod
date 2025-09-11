@@ -1,8 +1,12 @@
 module github.com/spetix/days2xmasleft
 
-go 1.23.2
+go 1.24
+
+toolchain go1.24.5
 
 require github.com/inconshreveable/mousetrap v1.1.0 // indirect
+
+require github.com/spetix/bar-out-adapters v0.0.3
 
 require (
 	github.com/spf13/cobra v1.8.1
